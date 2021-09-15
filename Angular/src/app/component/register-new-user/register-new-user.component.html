@@ -1,0 +1,91 @@
+<!-- Write necessary code-->
+<div class="login-view-wrapper custom-container">
+  <div class="login-view">
+    <div class="logo-wrapper">
+      <h2 >SIGN UP</h2>
+    </div>
+    <div class="login-form-wrapper" >
+      <form class="ro-form" [formGroup]="signupForm">
+        <div class="form-group">
+          <label class="labelHead" for="username">
+            <b>Username</b>
+          </label>
+          <input type="text" id="username" placeholder="username" formControlName="userName">
+          <div *ngIf="signupForm.get('userName').errors!=null">
+            <div class="form-error-messages" id="error-no-username" *ngIf="signupForm.get('userName').errors.required" >
+              {{emptyUserName}}
+            </div>
+            <div class="form-error-messages" id="error-minlength-username" *ngIf="signupForm.get('userName').errors.minlength">
+              {{minlengthUserName}}
+            </div>
+            <div class="form-error-messages" id="error-maxlength-username" *ngIf="signupForm.get('userName').errors.maxlength">
+              {{maxlengthUserName}}
+            </div>
+            <div class="form-error-messages" id="error-pattern-username" *ngIf="signupForm.get('userName').errors.pattern">
+              {{userNamePattern}}
+            </div>
+        </div>
+      </div>
+        <div class="form-group">
+          <label class="labelHead" for="password">
+            <b>Password</b>
+          </label>
+          <input type="password" id="password" placeholder="password" formControlName="password">
+          <div *ngIf="signupForm.get('password').errors!=null">
+            <div class="form-error-messages" id="error-no-password" *ngIf="signupForm.get('password').errors.required">
+              {{emptyPassword}}
+            </div>
+            <div class="form-error-messages" id="error-minlength-password" *ngIf="signupForm.get('password').errors.minlength" >
+              {{minlengthPassword}}
+            </div>
+            <div class="form-error-messages" id="error-maxlength-password" *ngIf="signupForm.get('password').errors.maxlength" >
+              {{maxlengthPassword}}
+            </div>
+            <div class="form-error-messages" id="error-pattern-password" *ngIf="signupForm.get('password').errors.pattern" >
+              {{passwordPattern}}
+            </div>
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="labelHead" for="mobile" >
+            Contact number
+          </label>
+          <input type="number" value="" id="mobile" placeholder="mobile number" formControlName="mobile">
+          <div id="error-mobile" class="form-error-messages" *ngIf="signupForm.get('mobile').errors!=null"> 
+            {{mobileErrMsg}}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="labelHead" for="email">
+            Email
+          </label>
+          <input type="email" value="" id="email" placeholder="Email" formControlName="email">
+          <div id="error-email" class="form-error-messages" *ngIf="signupForm.get('email').errors!=null">
+            {{emailErrMsg}}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="labelHead" for="location">
+            Location
+          </label>
+          <input type="text" value="" id="location" placeholder="Location"  formControlName="location">
+          <div id="error-location" class="form-error-messages" *ngIf="signupForm.get('location').errors!=null">
+            {{locationErrMsg}}
+          </div>
+        </div>
+
+        <div class="col-sm-12 clmn12">
+          <!-- call goBack method when clicking on this button-->
+          <button id="back"  (click)="goBack()"  class="guest-btn">Back</button>
+          <!-- disable button if form not valid -->
+          <!-- call signUp method when clicking on this button-->
+          <button id="signup" [disabled]="signupForm.invalid" (click)="signUp()" class="login-btn" type="submit">Create Account</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

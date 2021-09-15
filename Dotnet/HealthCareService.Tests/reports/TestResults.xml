@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies timestamp="07/09/2021 09:33:47">
+  <assembly name="/projects/challenge/Dotnet/HealthCareService.Tests/bin/Debug/netcoreapp3.0/HealthCareService.Tests.dll" run-date="2021-07-09" run-time="09:33:47" total="6" passed="4" failed="2" skipped="0" time="1.577" errors="0">
+    <errors />
+    <collection total="6" passed="4" failed="2" skipped="0" name="Test collection for HealthCareService.Tests.HealthCareServiceTests" time="1.577">
+      <test name="HealthCareService.Tests.HealthCareServiceTests.addUser" type="HealthCareService.Tests.HealthCareServiceTests" method="addUser" time="0.8940483" result="Pass">
+        <traits />
+      </test>
+      <test name="HealthCareService.Tests.HealthCareServiceTests.addUser2" type="HealthCareService.Tests.HealthCareServiceTests" method="addUser2" time="0.0446314" result="Pass">
+        <traits />
+      </test>
+      <test name="HealthCareService.Tests.HealthCareServiceTests.login" type="HealthCareService.Tests.HealthCareServiceTests" method="login" time="0.3477628" result="Pass">
+        <traits />
+      </test>
+      <test name="HealthCareService.Tests.HealthCareServiceTests.addPatient" type="HealthCareService.Tests.HealthCareServiceTests" method="addPatient" time="0.0307495" result="Fail">
+        <failure>
+          <message>Assert.Equal() Failure
+          ↓ (pos 0)
+Expected: Unauthorized
+Actual:   NotFound
+          ↑ (pos 0)</message>
+          <stack-trace>   at HealthCareService.Tests.HealthCareServiceTests.addPatient() in /projects/challenge/Dotnet/HealthCareService.Tests/HealthCareServiceTests.cs:line 83
+--- End of stack trace from previous location where exception was thrown ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="HealthCareService.Tests.HealthCareServiceTests.addmorePatients" type="HealthCareService.Tests.HealthCareServiceTests" method="addmorePatients" time="0.1896248" result="Fail">
+        <failure>
+          <message>Assert.Equal() Failure
+Expected: 3
+Actual:   2</message>
+          <stack-trace>   at HealthCareService.Tests.HealthCareServiceTests.addmorePatients() in /projects/challenge/Dotnet/HealthCareService.Tests/HealthCareServiceTests.cs:line 138
+--- End of stack trace from previous location where exception was thrown ---</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="HealthCareService.Tests.HealthCareServiceTests.appointment" type="HealthCareService.Tests.HealthCareServiceTests" method="appointment" time="0.0697029" result="Pass">
+        <traits />
+      </test>
+    </collection>
+  </assembly>
+</assemblies>
